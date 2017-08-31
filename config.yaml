@@ -1,0 +1,23 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_fish:
+    dst: ~/.config/fish
+    src: config/fish
+  d_nvim:
+    dst: ~/.config/nvim
+    src: config/nvim
+  f_tmux.conf:
+    dst: ~/.tmux.conf
+    src: tmux.conf
+  f_tmuxcolors-base16.conf:
+    dst: ~/.tmux/tmuxcolors-base16.conf
+    src: tmux/tmuxcolors-base16.conf
+profiles:
+  bm.local:
+  - d_fish
+  - d_nvim
+  - f_tmuxcolors-base16.conf
+  - f_tmux.conf
